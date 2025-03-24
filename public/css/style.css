@@ -1,178 +1,379 @@
 /* Import Font Google */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
 
 /* Reset CSS */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-    background: linear-gradient(135deg, #1B1B2F, #16213E, #0F3460);
-    color: white;
-    min-height: 100vh;
-    transition: background 3s ease-in-out;
+  background: linear-gradient(135deg, #1b1b2f, #16213e, #0f3460);
+  color: white;
+  min-height: 100vh;
+  transition: background 3s ease-in-out;
+}
+
+/* Login Form Styling */
+.login-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.login-form .form-label {
+  color: #fff;
+  font-weight: bold;
+}
+
+.login-form .form-control {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.login-form .form-control:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #1976d2;
+  box-shadow: 0 0 10px rgba(25, 118, 210, 0.5);
+}
+
+.login-form .btn-primary {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: #1976d2;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.login-form .btn-primary:hover {
+  background: #1565c0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(25, 118, 210, 0.3);
+}
+
+.login-form .btn-secondary {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: #6c757d;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.login-form .btn-secondary:hover {
+  background: #5a6268;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(108, 117, 125, 0.3);
+}
+
+/* Animasi */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Register Form Styling */
+.register-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.register-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.register-form .form-label {
+  color: #fff;
+  font-weight: bold;
+}
+
+.register-form .form-control {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.register-form .form-control:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #1976d2;
+  box-shadow: 0 0 10px rgba(25, 118, 210, 0.5);
+}
+
+.register-form .btn-primary {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: #1976d2;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.register-form .btn-primary:hover {
+  background: #1565c0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(25, 118, 210, 0.3);
+}
+
+.register-form .btn-secondary {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: #6c757d;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.register-form .btn-secondary:hover {
+  background: #5a6268;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(108, 117, 125, 0.3);
 }
 
 #toast-container {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .toast {
-    min-width: 280px;
-    max-width: 350px;
-    padding: 12px 18px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  min-width: 280px;
+  max-width: 350px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition:
+    opacity 0.4s ease-in-out,
+    transform 0.4s ease-in-out;
 }
 
 .toast.show {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.toast.success { background: #28a745; color: white; }
-.toast.error { background: #dc3545; color: white; }
-.toast.warning { background: #ffc107; color: #212529; }
-.toast.info { background: #17a2b8; color: white; }
-
+.toast.success {
+  background: #28a745;
+  color: white;
+}
+.toast.error {
+  background: #dc3545;
+  color: white;
+}
+.toast.warning {
+  background: #ffc107;
+  color: #212529;
+}
+.toast.info {
+  background: #17a2b8;
+  color: white;
+}
 
 /* Navbar Styling */
 nav {
-    background-color: #1976D2;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #1976d2;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav a {
-    color: white;
-    font-weight: bold;
-    margin: 0 15px;
-    text-decoration: none;
-    transition: 0.3s;
+  color: white;
+  font-weight: bold;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 nav a:hover {
-    color: #FFC107;
+  color: #ffc107;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    animation: fadeIn 1.5s ease-in-out;
+  font-size: 2.5rem;
+  font-weight: bold;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    opacity: 0.8;
-    animation: fadeIn 2s ease-in-out;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  animation: fadeIn 2s ease-in-out;
 }
 
 /* Efek Ramadhan - Bulan, Bintang, Lentera, dan Kubah Masjid */
 .moon {
-    position: absolute;
-    top: 20px;
-    right: 50px;
-    width: 50px;
-    height: 50px;
-    background: yellow;
-    border-radius: 50%;
-    box-shadow: 0px 0px 15px rgba(255, 255, 0, 0.8);
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  background: yellow;
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px rgba(255, 255, 0, 0.8);
 }
 
 .stars {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .stars span {
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    background: white;
-    border-radius: 50%;
-    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
-    animation: twinkle 3s infinite alternate;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
+  animation: twinkle 3s infinite alternate;
 }
 
-.stars span:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
-.stars span:nth-child(2) { top: 30%; left: 50%; animation-delay: 1s; }
-.stars span:nth-child(3) { top: 50%; left: 80%; animation-delay: 2s; }
-.stars span:nth-child(4) { top: 70%; left: 30%; animation-delay: 0.5s; }
-.stars span:nth-child(5) { top: 85%; left: 60%; animation-delay: 1.5s; }
+.stars span:nth-child(1) {
+  top: 10%;
+  left: 20%;
+  animation-delay: 0s;
+}
+.stars span:nth-child(2) {
+  top: 30%;
+  left: 50%;
+  animation-delay: 1s;
+}
+.stars span:nth-child(3) {
+  top: 50%;
+  left: 80%;
+  animation-delay: 2s;
+}
+.stars span:nth-child(4) {
+  top: 70%;
+  left: 30%;
+  animation-delay: 0.5s;
+}
+.stars span:nth-child(5) {
+  top: 85%;
+  left: 60%;
+  animation-delay: 1.5s;
+}
 
 .kubah {
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 60px;
-    background: #FFC107;
-    border-radius: 50% 50% 0 0;
-    box-shadow: 0px 5px 15px rgba(255, 193, 7, 0.5);
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 60px;
+  background: #ffc107;
+  border-radius: 50% 50% 0 0;
+  box-shadow: 0px 5px 15px rgba(255, 193, 7, 0.5);
 }
 
 .lentera {
-    position: absolute;
-    top: 30px;
-    left: 20px;
-    width: 20px;
-    height: 50px;
-    background: #FF5733;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(255, 87, 51, 0.8);
-    animation: swing 2s infinite alternate;
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  width: 20px;
+  height: 50px;
+  background: #ff5733;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(255, 87, 51, 0.8);
+  animation: swing 2s infinite alternate;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes twinkle {
-    from { opacity: 0.3; }
-    to { opacity: 1; }
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes swing {
-    from { transform: rotate(-5deg); }
-    to { transform: rotate(5deg); }
+  from {
+    transform: rotate(-5deg);
+  }
+  to {
+    transform: rotate(5deg);
+  }
 }
